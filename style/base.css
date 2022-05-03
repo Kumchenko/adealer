@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+:root {
+    --main-text-color: #FF5C00;
+    --secondary-text-color: #FF7E36;
+    --main-h-color: #873101;
+    --button-dimmed: #78D3BA;
+    --button-active: #23A783;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway';
+    background-image: url('../Assets/background.png');
+    background-position: center;
+    background-size: cover;
+    min-width: 340px;
+}
+
+.header {
+    height: 140px;
+    width: 100%;
+    box-shadow: 0px 2px 4px 0px #858585;
+}
+
+.info-bar, .nav-bar {
+    margin: auto;
+    width: 73%;
+    height: 70px;
+}
+
+.info-bar-address-wrapper {
+    width: 336px;
+    height: 70px;
+    float: left;
+}
+
+.info-bar-tel-wrapper, .info-bar-feedback-wrapper {
+    box-sizing: border-box;
+    width: 230px;
+    height: 70px;
+    float: left;
+    position: absolute;
+}
+
+.info-bar-tel-wrapper {
+    left: 50%;
+    margin-left: -115px;
+}
+
+.info-bar-feedback-wrapper {
+    right: 0;
+}
+
+.info-bar-tel-button, .info-bar-feedback-button {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 230px;
+    height: 40px;
+}
+
+.info-bar-tel-button {
+    background: #FFB78E;
+    border: 2px solid var(--main-h-color);
+}
+
+.info-bar-feedback-button {
+    background: var(--button-active);
+}
+
+.info-address, .info-bar-tel, .info-bar-feedback-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: var(--main-h-color);
+    text-align: center;
+}
+
+.info-bar-tel-desc {
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+.info-bar-feedback-title {
+    color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 19px;
+    width: 230px;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.info-address {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 19px;
+}
+
+.nav-bar-wrapper {
+    background-color: #ffffff;
+    height: 70px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 55px;
+}
+
+.nav-logo-wrapper, .nav-logo {
+    width: 140px;
+    height: 70px;
+}
+
+.nav-logo {
+    position: absolute;
+    background-image: url('../Assets/logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-telegram-logo {
+    position: absolute;
+    background-image: url('../Assets/icons/Telegram.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.nav-instagram-logo {
+    position: absolute;
+    background-image: url('../Assets/icons/Instagram.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.nav-social-logo-wrapper {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.nav-li {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--main-text-color);
+}
+
+.nav-li:last-child {
+    margin-right: 0px;
+}
+
+#active-li {
+    font-weight: 800;
+    color: var(--main-h-color);
+}
+
+.nav-social-tab {
+    width: 140px;
+    height: 70px;
+}
+
+
+/* footer */
+
+.footer {
+    position: absolute;
+    height: 70px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-credentials {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--main-h-color);
+}

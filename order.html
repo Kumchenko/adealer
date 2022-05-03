@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовити ремонт – AppleDealer</title>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet'>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/order.css">
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="info-bar">
+            <div class="info-bar-address-wrapper">
+                <div class="info-address">
+                    Дніпро, вул. Михайла Коцюбинського 16
+                </div>
+            </div>
+            <div class="info-bar-tel-wrapper">
+                <div class="info-bar-tel-button">
+                    <a href="tel:+380637776363">
+                        <div class="info-bar-tel">
+                            +380637776363
+                        </div>
+                        <div class="info-bar-tel-desc">
+                            Telegram, Viber, WhatsApp
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="info-bar-feedback-wrapper">
+                <div class="info-bar-feedback-button">
+                    <a href="../feedback.html" class="info-bar-feedback-title">
+                        Зворотній зв'язок
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar-wrapper">
+            <div class="nav-bar">
+                <div class="nav-logo-wrapper">
+                    <i class="nav-logo"></i>
+                </div>
+                <ul class="nav-ul">
+                    <a href="../index.html"><li class="nav-li">Про нас</li></a>
+                    <a href="../order.html"><li class="nav-li" id="active-li">Замовити ремонт</li></a>
+                    <a href="../check.html"><li class="nav-li">Перевірити статус</li></a>
+                </ul>
+                <div class="nav-social-wrapper">
+                    <div class="nav-social-tab">
+                        <div class="nav-social-logo-wrapper">
+                            <a href="https://www.instagram.com/appledealer_ua/" class="nav-instagram-logo"></a>
+                        </div>
+                        <div class="nav-social-logo-wrapper">
+                            <a href="https://www.instagram.com/appledealer_ua/" class="nav-telegram-logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="tiles-wrapper">
+            <div class="tile-wrapper">
+                <div class="tile">
+                    <h3 class="tile-header">Модель</h3>
+                    <form class="form" action="success.html">
+                    <select class="form-input form-input-select" name="model" id="select-model" required>
+                        <option value="iphone-6s">iPhone 6s</option>
+                        <option value="iphone-6s-plus">iPhone 6s Plus</option>
+                        <option value="iphone-7">iPhone 7</option>
+                        <option value="iphone-7-plus">iPhone 7 Plus</option>
+                        <option value="iphone-8">iPhone 8</option>
+                        <option value="iphone-8-plus">iPhone 8 Plus</option>
+                        <option value="iphone-x">iPhone X</option>
+                        <option value="iphone-xr">iPhone Xr</option>
+                        <option value="iphone-xs">iPhone Xs</option>
+                        <option value="iphone-xs-max">iPhone Xs Max</option>
+                        <option value="iphone-11">iPhone 11</option>
+                        <option value="iphone-11-pro">iPhone 11 Pro</option>
+                        <option value="iphone-11-pro-max">iPhone 11 Pro Max</option>
+                        <option value="iphone-12-mini">iPhone 12 Mini</option>
+                        <option value="iphone-12">iPhone 12</option>
+                        <option value="iphone-12-pro">iPhone 12 Pro</option>
+                        <option value="iphone-12-pro-max">iPhone 12 Pro Max</option>
+                        <option value="iphone-13-mini">iPhone 13 Mini</option>
+                        <option value="iphone-13">iPhone 13</option>
+                        <option value="iphone-13-pro">iPhone 13 Pro</option>
+                        <option value="iphone-13-pro-max">iPhone 13 Pro Max</option>
+                    </select>
+                    <div class="form-model-image-wrapper">
+                        <i id="form-model-image"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-wrapper">
+                <div class="tile">
+                    <h3 class="tile-header">Контактні дані</h3>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="name">Імʼя</label>
+                        <input class="form-input" type="text" id="name" name="name" placeholder="Введіть імʼя" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="surname">Прізвище</label>
+                        <input class="form-input" type="text" id="surname" name="surname" placeholder="Введіть прізвище" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="tel">Телефон</label>
+                        <input class="form-input" type="tel" id="tel" name="tel" placeholder="+38(___)-___-__-__" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="example@example.com" required>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-wrapper">
+                <div class="tile">
+                    <h3 class="tile-header">Замовлення</h3>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="component">Компонент</label>
+                        <select class="form-input form-input-select" name="component" id="select" required>
+                            <option value="display">Дисплей</option>
+                            <option value="housing">Корпус</option>
+                            <option value="battery">Акумулятор</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="quality">Якість</label>
+                        <select class="form-input form-input-select" name="quality" id="select" required>
+                            <option value="original">Оригінал</option>
+                            <option value="copy">Копія</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="tel">Ціна</label>
+                        <input class="form-input" type="text" id="cost" name="cost" value="1000 грн" readonly>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="form-submit-button" type="submit" >Замовити</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-credentials">
+            (с) 2022 AppleDealer. Всі права захищені
+        </div>
+    </footer>
+</body>
+</html>

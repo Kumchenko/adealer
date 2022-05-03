@@ -1,0 +1,102 @@
+/* main */
+.main {
+    width: 73%;
+    margin: auto;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.tiles-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tile-wrapper {
+    background-color: #ffffff;
+    width: 300px;
+    height: 420px;
+    border-radius: 20px;
+}
+
+.tile {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tile-header {
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--main-text-color);
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--secondary-text-color);
+    top: 2px;
+}
+
+.form-input {
+    border: 1px solid #FFB78E;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 30px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 16px;
+    width: 260px;
+    color: var(--main-h-color);
+    margin-top: 7px;
+}
+
+.form-input:first-child {
+    margin-top: 0px;
+}
+
+input.form-input {
+    padding-left: 8px;
+}
+
+.input-wrapper {
+    height: 60px;
+    margin-bottom: 36px;
+}
+
+.input-wrapper:last-child {
+    margin-bottom: 0px;
+}
+
+.tile-header {
+    margin-top: 10px;
+    height: 40px;
+    width: 260px;
+    text-align: center;
+}
+
+.form-submit-button {
+    background-color: var(--button-active);
+    border-radius: 20px;
+    border-width: 0px;
+    width: 260px;
+    height: 60px;
+    font-weight: 800;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.form-model-image-wrapper {
+    top: 10px;
+    width: 260px;
+    height: 300px;
+}
+
+#form-model-image {
+    position: absolute;
+    background-image: url('../Assets/images/iphones/iphone-6s.png');
+    background-position: center;
+    background-size: cover;
+    width: 260px;
+    height: 300px;
+}
