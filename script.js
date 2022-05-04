@@ -6,6 +6,6 @@ window.onload=function(){
 
 function changeModel() {
     const modelImage = document.getElementById('form-model-image');
-    var url = "url('../assets/images/iphones/" + this.value + ".png')";
+    var url = "url('./assets/images/iphones/" + this.value + ".png')";
     modelImage.style.backgroundImage = url;
 }

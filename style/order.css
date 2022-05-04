@@ -94,7 +94,7 @@ input.form-input {
 
 #form-model-image {
     position: absolute;
-    background-image: url('../Assets/images/iphones/iphone-6s.png');
+    background-image: url('../assets/images/iphones/iphone-6s.png');
     background-position: center;
     background-size: cover;
     width: 260px;
