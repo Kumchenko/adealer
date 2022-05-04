@@ -20,7 +20,7 @@ body {
 
 body {
     font-family: 'Raleway';
-    background-image: url('../assets/background.PNG');
+    background-image: url('../assets/background.png');
     background-position: center;
     background-size: cover;
     min-width: 340px;
@@ -151,14 +151,14 @@ a {
 
 .nav-logo {
     position: absolute;
-    background-image: url('../assets/logo.SVG');
+    background-image: url('../assets/logo.svg');
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .nav-telegram-logo {
     position: absolute;
-    background-image: url('../assets/icons/Telegram.SVG');
+    background-image: url('../assets/icons/Telegram.svg');
     background-position: center;
     background-repeat: no-repeat;
     width: 70px;
@@ -167,7 +167,7 @@ a {
 
 .nav-instagram-logo {
     position: absolute;
-    background-image: url('../assets/icons/Instagram.SVG');
+    background-image: url('../assets/icons/Instagram.svg');
     background-position: center;
     background-repeat: no-repeat;
     width: 70px;
