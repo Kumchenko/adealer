@@ -20,7 +20,7 @@ body {
 
 body {
     font-family: 'Raleway';
-    background-image: url('../Assets/background.png');
+    background-image: url('../Assets/background.PNG');
     background-position: center;
     background-size: cover;
     min-width: 340px;
