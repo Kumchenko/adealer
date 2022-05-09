@@ -1,21 +1,8 @@
-:root {
-    --main-text-color: #FF5C00;
-    --secondary-text-color: #FF7E36;
-    --main-h-color: #873101;
-    --button-dimmed: #78D3BA;
-    --button-active: #23A783;
-}
-
-.main {
-    width: 73%;
-    margin: auto;
-    padding-top: 8%;
-    padding-bottom: 8%;
-}
-
 .tile-wrapper {
-    background-color: #ffffff;
+    background-color: var(--white-color);
     border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .tile {
@@ -33,14 +20,14 @@ h1#tile-header {
     margin-top: 48px;
     font-weight: 700;
     font-size: 40px;
-    color: var(--main-text-color);
+    color: var(--main-color);
     text-align: center;
 }
 
 #tile-desc {
     font-weight: 500;
     font-size: 20px;
-    color: var(--secondary-text-color);
+    color: var(--secondary-color);
     text-align: center;
     margin-top: 20px;
 }
@@ -48,7 +35,7 @@ h1#tile-header {
 .tile-detail {
     font-weight: 700;
     font-size: 20px;
-    color: var(--main-h-color);
+    color: var(--bold-color);
     text-align: center;
 }
 
@@ -59,12 +46,12 @@ h1#tile-header {
 #return {
     width: 250px;
     height: 60px;
-    background: #23A783;
+    background: var(--button-active);
     border-radius: 20px;
     border-width: 0px;
     font-weight: 800;
     font-size: 24px;
-    color: #ffffff;
+    color: var(--white-color);
     margin-top: 60px;
     margin-bottom: 30px;
 }

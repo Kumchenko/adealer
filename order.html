@@ -10,55 +10,44 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/order.css">
     <script type="text/javascript" src="https://livejs.com/live.js"></script>
-    <script src="./script.js" defer></script>
+    <script src="./order.js" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="info-bar">
-            <div class="info-bar-address-wrapper">
-                <div class="info-address">
-                    Дніпро, вул. Михайла Коцюбинського 16
+            <a class="info-bar-address" href="https://goo.gl/maps/6XaMBcnDsrfsMUQ39">
+                Дніпро, вул. Михайла Коцюбинського 16
+            </a>
+            <button class="info-bar-tel">
+                +380637776363
+                <div class="info-bar-tel-desc">
+                    Telegram, Viber, WhatsApp
                 </div>
-            </div>
-            <div class="info-bar-tel-wrapper">
-                <div class="info-bar-tel-button">
-                    <a href="tel:+380637776363">
-                        <div class="info-bar-tel">
-                            +380637776363
-                        </div>
-                        <div class="info-bar-tel-desc">
-                            Telegram, Viber, WhatsApp
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="info-bar-feedback-wrapper">
-                <div class="info-bar-feedback-button">
-                    <a href="../feedback.html" class="info-bar-feedback-title">
-                        Зворотній зв'язок
-                    </a>
-                </div>
-            </div>
+            </button>
+            <button class="info-bar-feedback green-button">
+                Зворотній зв'язок
+            </button>
         </div>
         <div class="nav-bar-wrapper">
             <div class="nav-bar">
                 <div class="nav-logo-wrapper">
                     <i class="nav-logo"></i>
                 </div>
-                <ul class="nav-ul">
-                    <a href="../index.html"><li class="nav-li">Про нас</li></a>
-                    <a href="../order.html"><li class="nav-li" id="active-li">Замовити ремонт</li></a>
-                    <a href="../check.html"><li class="nav-li">Перевірити статус</li></a>
-                </ul>
+                <div class="nav-pages">
+                    <a href="../index.html">Про нас</a>
+                    <a href="../order.html" id="nav-active-page">Замовити ремонт</a>
+                    <a href="../check.html">Перевірити статус</a>
+                </div>
                 <div class="nav-social-wrapper">
-                    <div class="nav-social-tab">
-                        <div class="nav-social-logo-wrapper">
-                            <a href="https://www.instagram.com/appledealer_ua/" class="nav-instagram-logo"></a>
-                        </div>
-                        <div class="nav-social-logo-wrapper">
-                            <a href="https://www.instagram.com/appledealer_ua/" class="nav-telegram-logo"></a>
-                        </div>
+                    <div class="nav-social-logo-wrapper">
+                        <a href="https://www.instagram.com/appledealer_ua/" class="nav-instagram-logo"></a>
                     </div>
+                    <div class="nav-social-logo-wrapper">
+                        <a href="https://www.instagram.com/appledealer_ua/" class="nav-telegram-logo"></a>
+                    </div>
+                </div>
+                <div class="nav-menu-logo-wrapper">
+                    <i class="nav-menu-logo"></i>
                 </div>
             </div>
         </div>
@@ -141,7 +130,7 @@
                         <input class="form-input" type="text" id="cost" name="cost" value="1000 грн" readonly>
                     </div>
                     <div class="button-wrapper">
-                        <button class="form-submit-button" type="submit" >Замовити</button>
+                        <button class="form-submit-button green-button" type="submit" >Замовити</button>
                     </div>
                 </form>
                 </div>

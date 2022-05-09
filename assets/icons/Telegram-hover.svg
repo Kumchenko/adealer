@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="70"
+   height="70"
+   viewBox="0 0 70 70"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="Telegram-hover.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1206"
+     inkscape:window-height="805"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="3.3714286"
+     inkscape:cx="35"
+     inkscape:cy="35"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6" />
+  <path
+     d="M35 55C46.0457 55 55 46.0457 55 35C55 23.9543 46.0457 15 35 15C23.9543 15 15 23.9543 15 35C15 46.0457 23.9543 55 35 55Z"
+     fill="#FF7E36"
+     id="path2"
+     style="fill:#ff5c00;fill-opacity:1" />
+  <path
+     d="M23.3237 34.8266L36.7919 29.2775C38.1214 28.6995 42.63 26.8497 42.63 26.8497C42.63 26.8497 44.711 26.0405 44.5375 28.0058C44.4797 28.8151 44.0173 31.6474 43.5549 34.711L42.1098 43.7862C42.1098 43.7862 41.9942 45.1156 41.0115 45.3469C40.0289 45.5781 38.4104 44.5376 38.1214 44.3064C37.8902 44.133 33.7861 41.5318 32.2832 40.2602C31.8786 39.9133 31.4162 39.2197 32.341 38.4104C34.4219 36.5029 36.9075 34.133 38.4104 32.6301C39.104 31.9365 39.7977 30.318 36.9075 32.2833L28.7572 37.7746C28.7572 37.7746 27.8324 38.3526 26.0982 37.8324C24.3641 37.3122 22.341 36.6185 22.341 36.6185C22.341 36.6185 20.9537 35.7515 23.3237 34.8266V34.8266Z"
+     fill="white"
+     id="path4" />
+</svg>
