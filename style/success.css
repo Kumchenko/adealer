@@ -46,12 +46,9 @@ h1#tile-header {
 #return {
     width: 250px;
     height: 60px;
-    background: var(--button-active);
     border-radius: 20px;
-    border-width: 0px;
     font-weight: 800;
     font-size: 24px;
-    color: var(--white-color);
     margin-top: 60px;
     margin-bottom: 30px;
 }
