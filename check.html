@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Замовити ремонт – AppleDealer</title>
+    <title>Перевірити статус – AppleDealer</title>
     <link rel="icon" href="assets/icons/favicon.png" type="image/png">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet'>
-    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="styles/base.css">
     <script type="text/javascript" src="https://livejs.com/live.js"></script>
-    <script src="./header.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -29,13 +28,18 @@
         </div>
         <div class="nav-bar-wrapper">
             <div class="nav-bar">
-                <div class="nav-logo-wrapper">
-                    <i class="nav-logo"></i>
+                <div class="nav-bar-mobile">
+                    <div class="nav-logo-wrapper">
+                        <i class="nav-logo"></i>
+                    </div>
+                    <div class="nav-menu-logo-wrapper">
+                        <i class="nav-menu-logo"></i>
+                    </div>
                 </div>
                 <div class="nav-pages">
                     <a href="./index.html">Про нас</a>
-                    <a href="./order.html">Замовити ремонт</a>
-                    <a href="./check.html" id="nav-active-page">Перевірити статус</a>
+                    <a href="./order.html" id="nav-active-page">Замовити ремонт</a>
+                    <a href="./check.html">Перевірити статус</a>
                 </div>
                 <div class="nav-social-wrapper">
                     <div class="nav-social-logo-wrapper">
@@ -44,9 +48,6 @@
                     <div class="nav-social-logo-wrapper">
                         <a href="https://www.instagram.com/appledealer_ua/" class="nav-telegram-logo"></a>
                     </div>
-                </div>
-                <div class="nav-menu-logo-wrapper">
-                    <i class="nav-menu-logo"></i>
                 </div>
             </div>
         </div>
@@ -63,4 +64,5 @@
         <div class="footer-callback-icon"></div>
     </button>
 </body>
+<script type="text/javascript" src="./scripts/base.js" defer></script>
 </html>
