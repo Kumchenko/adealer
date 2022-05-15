@@ -3,14 +3,14 @@
 .tiles-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .tile-wrapper {
     background-color: var(--white-color);
     width: 300px;
-    height: 420px;
+    height: 320px;
     border-radius: 20px;
 }
 
@@ -81,28 +81,10 @@ input.form-input {
     font-size: 24px;
 }
 
-/* image of model */
-
-.form-model-image-wrapper {
-    top: 10px;
-    width: 260px;
-    height: 300px;
+p {
+    margin-bottom: 70px;
+    font-weight: 500;
+    color: var(--bold-color);
+    text-align: center;
+    font-size: larger;
 }
-
-#form-model-image {
-    position: absolute;
-    background-image: url('../assets/images/iphones/empty.png');
-    background-position: center;
-    background-size: cover;
-    width: 260px;
-    height: 300px;
-}
-
-/* adaptivity */
-
-@media (max-width: 959px) {
-    .tiles-wrapper {
-        justify-content: space-around;
-        gap: 25px;
-    }
-} 

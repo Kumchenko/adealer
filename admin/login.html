@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Перевірити статус – AppleDealer</title>
+    <title>Вхід – AppleDealer</title>
     <link rel="icon" href="assets/icons/favicon.png" type="image/png">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet'>
-    <link rel="stylesheet" href="styles/base.css">
-    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/onetile.css">
 </head>
 <body>
     <header class="header">
         <div class="info-bar">
             <a class="info-bar-address" href="https://goo.gl/maps/6XaMBcnDsrfsMUQ39">
-                Дніпро, вул. Михайла Коцюбинського 16
+                Неавторизовано
             </a>
             <button class="info-bar-tel">
                 +380637776363
                 <div class="info-bar-tel-desc">
                     Telegram, Viber, WhatsApp
                 </div>
-            </button>
-            <button class="info-bar-feedback green-button">
-                Зворотній зв'язок
             </button>
         </div>
         <div class="nav-bar-wrapper">
@@ -37,9 +34,7 @@
                     </div>
                 </div>
                 <div class="nav-pages">
-                    <a href="./index.html">Про нас</a>
-                    <a href="./order.html">Замовити ремонт</a>
-                    <a href="./check.html" id="nav-active-page">Перевірити статус</a>
+                    <a href="../index.php">На головну</a>
                 </div>
                 <div class="nav-social-wrapper">
                     <div class="nav-social-logo-wrapper">
@@ -53,16 +48,33 @@
         </div>
     </header>
     <main class="main">
-        <p style="text-align: center;">Це Check.html. Він поки що пустий.</p>
+        <p>Авторизований доступ <b>ТІЛЬКИ ДЛЯ ПРАЦІВНИКІВ<b>.</p>
+        <div class="tiles-wrapper">
+            <div class="tile-wrapper">
+                <div class="tile">
+                    <form class="form" method="post" action="login.php">
+                    <h3 class="tile-header">Авторизація</h3>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="login">Логін</label>
+                        <input class="form-input" type="text" id="login" name="login" placeholder="Введіть логін" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="password">Пароль</label>
+                        <input class="form-input" type="password" id="password" name="pass" placeholder="Введіть пароль" required>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="form-submit-button green-button" type="submit" >Вхід</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer-credentials">
             (с) 2022 AppleDealer. Всі права захищені
         </div>
     </footer>
-    <button class="footer-callback green-button">
-        <div class="footer-callback-icon"></div>
-    </button>
 </body>
-<script type="text/javascript" src="./scripts/base.js" defer></script>
+<script type="text/javascript" src="../scripts/base.js" defer></script>
 </html>

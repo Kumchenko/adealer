@@ -10,9 +10,18 @@ const nav_social_wrapper = document.querySelector('.nav-social-wrapper');
 
 opened = false;
 
-tel.addEventListener("click", function(){click_button("tel:+380637776363")} );
-feedback.addEventListener("click", function(){click_button("./feedback.html")} );
-callback.addEventListener("click", function(){click_button("./feedback.html")} );
+if (tel != null){
+    tel.addEventListener("click", function(){click_button("tel:+380637776363")} );
+}
+
+if (feedback != null){
+    feedback.addEventListener("click", function(){click_button("./feedback.html")} );
+}
+
+if (callback != null){
+    callback.addEventListener("click", function(){click_button("./feedback.html")} );
+}
+
 menu.addEventListener("click", function(){menu_show()} );
 
 
@@ -38,7 +47,7 @@ function menu_show() {
 }
 
 window.addEventListener('resize', function(event){
-    if (document.documentElement.clientWidth > 589) {
+    if (document.documentElement.clientWidth >= 590) {
         header.style.height="140px";
         nav_bar_wrapper.style.height="70px";
         nav_pages.style.display = nav_social_wrapper.style.display = "flex";

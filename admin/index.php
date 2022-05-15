@@ -1,0 +1,1 @@
+<?php Header("Location: allorders.php"); ?>

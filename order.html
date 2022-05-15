@@ -9,7 +9,6 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet'>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/order.css">
-    <script type="text/javascript" src="https://livejs.com/live.js"></script>
 </head>
 <body>
     <header class="header">
@@ -38,9 +37,9 @@
                     </div>
                 </div>
                 <div class="nav-pages">
-                    <a href="./index.html">Про нас</a>
-                    <a href="./order.html" id="nav-active-page">Замовити ремонт</a>
-                    <a href="./check.html">Перевірити статус</a>
+                    <a href="admin/login.html">Працівникам</a>
+                    <a href="order.html" id="nav-active-page">Замовити ремонт</a>
+                    <a href="status.html">Перевірити статус</a>
                 </div>
                 <div class="nav-social-wrapper">
                     <div class="nav-social-logo-wrapper">
@@ -58,12 +57,13 @@
             <div class="tile-wrapper">
                 <div class="tile">
                     <h3 class="tile-header">Модель</h3>
-                    <form class="form" action="success.html">
+                    <form class="form" method="post" action="./scripts/order.php">
                     <select class="form-input form-input-select" name="model" id="select-model" required>
-                        <option value="iphone-6s">iPhone 6s</option>
+                        <!-- <option value="iphone-6s">iPhone 6s</option>
                         <option value="iphone-6s-plus">iPhone 6s Plus</option>
                         <option value="iphone-7">iPhone 7</option>
-                        <option value="iphone-7-plus">iPhone 7 Plus</option>
+                        <option value="iphone-7-plus">iPhone 7 Plus</option> -->
+                        <option value="" disabled selected>Оберіть модель</option>
                         <option value="iphone-8">iPhone 8</option>
                         <option value="iphone-8-plus">iPhone 8 Plus</option>
                         <option value="iphone-x">iPhone X</option>
@@ -77,10 +77,10 @@
                         <option value="iphone-12">iPhone 12</option>
                         <option value="iphone-12-pro">iPhone 12 Pro</option>
                         <option value="iphone-12-pro-max">iPhone 12 Pro Max</option>
-                        <option value="iphone-13-mini">iPhone 13 Mini</option>
+                        <!-- <option value="iphone-13-mini">iPhone 13 Mini</option>
                         <option value="iphone-13">iPhone 13</option>
                         <option value="iphone-13-pro">iPhone 13 Pro</option>
-                        <option value="iphone-13-pro-max">iPhone 13 Pro Max</option>
+                        <option value="iphone-13-pro-max">iPhone 13 Pro Max</option> -->
                     </select>
                     <div class="form-model-image-wrapper">
                         <i id="form-model-image"></i>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="input-wrapper">
                         <label class="form-label" for="tel">Телефон</label>
-                        <input class="form-input" type="tel" id="tel" name="tel" placeholder="+38(___)-___-__-__" required>
+                        <input class="form-input" type="tel" pattern="[+]{1}38[0]{1}[0-9]{9}" id="tel" name="tel" placeholder="+38(___)-___-__-__" required>
                     </div>
                     <div class="input-wrapper">
                         <label class="form-label" for="email">Email</label>
@@ -113,23 +113,27 @@
                     <h3 class="tile-header">Замовлення</h3>
                     <div class="input-wrapper">
                         <label class="form-label" for="component">Компонент</label>
-                        <select class="form-input form-input-select" name="component" id="select" required>
-                            <option value="display">Дисплей</option>
-                            <option value="housing">Корпус</option>
-                            <option value="battery">Акумулятор</option>
+                        <select class="form-input form-input-select" name="component" id="select-component" required>
+                            <option value="" disabled selected>Оберіть компонент</option>
+                            <option value="1">Дисплей</option>
+                            <option value="2">Корпус</option>
+                            <option value="3">Акумулятор</option>
                         </select>
                     </div>
                     <div class="input-wrapper">
                         <label class="form-label" for="quality">Якість</label>
-                        <select class="form-input form-input-select" name="quality" id="select" required>
+                        <select class="form-input form-input-select" name="quality" required>
                             <option value="original">Оригінал</option>
-                            <option value="copy">Копія</option>
+                            <!-- <option value="copy">Копія</option> -->
                         </select>
                     </div>
                     <div class="input-wrapper">
                         <label class="form-label" for="tel">Ціна</label>
-                        <input class="form-input" type="text" id="cost" name="cost" value="1000 грн" readonly>
+                        <input class="form-input" type="text" id="cost" name="cost" placeholder="Безкоштовно" disabled>
                     </div>
+                    <!-- <div class="button-wrapper">
+                        <button class="form-submit-button green-button" type="submit" >Замовити</button>
+                    </div> -->
                     <div class="button-wrapper">
                         <button class="form-submit-button green-button" type="submit" >Замовити</button>
                     </div>
