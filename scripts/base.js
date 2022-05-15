@@ -15,11 +15,11 @@ if (tel != null){
 }
 
 if (feedback != null){
-    feedback.addEventListener("click", function(){click_button("./feedback.html")} );
+    feedback.addEventListener("click", function(){click_button("")} );
 }
 
 if (callback != null){
-    callback.addEventListener("click", function(){click_button("./feedback.html")} );
+    callback.addEventListener("click", function(){click_button("")} );
 }
 
 menu.addEventListener("click", function(){menu_show()} );
