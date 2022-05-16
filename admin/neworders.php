@@ -14,7 +14,7 @@ if(mysqli_num_rows($result)==0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><? echo $_SESSION['login']; ?> – AppleDealer</title>
-    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/icons/favicon.png" type="image/png">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/admin.css">
