@@ -18,13 +18,13 @@ $cost = $_SESSION['cost'];
 
 
 // connecting to db
-mysql_connect("localhost", "root", "") or die ("Неможливо під'єднатися до серверу");
-mysql_select_db("appledealer") or die ("Немає такої бази даних!");
+$connect = mysqli_connect("remotemysql.com:3306", "9loMZIDsgF", "mtlKq0K3Hn");
+mysqli_select_db($connect, "9loMZIDsgF");
 
 // model converting to string
 $select = "value='{$model}'";
 $query="SELECT string FROM transcript WHERE $select";
-$string=mysql_fetch_array(mysql_query($query));
+$string=mysqli_fetch_array(mysqli_query($connect, $query));
 ?>
 
 <!DOCTYPE html>

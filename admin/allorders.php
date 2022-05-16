@@ -1,9 +1,9 @@
 <?php 
 session_start(); 
-mysql_connect("localhost", "root", "") or die ("Неможливо під'єднатися до серверу");
-mysql_select_db("appledealer") or die ("Немає такої таблиці!");
-$result=mysql_query("SELECT * FROM employees WHERE login='{$_SESSION['login']}' AND pass='{$_SESSION['pass']}';");
-if(mysql_num_rows($result)==0) {
+$connect = mysqli_connect("remotemysql.com:3306", "9loMZIDsgF", "mtlKq0K3Hn");
+mysqli_select_db($connect, "9loMZIDsgF");
+$result=mysqli_query($connect, "SELECT * FROM employees WHERE login='{$_SESSION['login']}' AND pass='{$_SESSION['pass']}';");
+if(mysqli_num_rows($result)==0) {
     Header("Location: login.html");
 }
 ?>
@@ -66,15 +66,15 @@ if(mysql_num_rows($result)==0) {
 
         // Перевірка -> З привілеями показувати всі замовлення, а звичайним тільки нові, та які в процесі у них
         if($_SESSION['privs'] == '1') {
-            $orders=mysql_query("SELECT o.id, o.name, o.surname, o.tel, o.email, o.status, s.model, s.type, s.cost, o.employee, o.newdate, o.procdate, o.donedate FROM orders o, services s WHERE o.service = s.id");
+            $orders=mysqli_query($connect, "SELECT o.id, o.name, o.surname, o.tel, o.email, o.status, s.model, s.type, s.cost, o.employee, o.newdate, o.procdate, o.donedate FROM orders o, services s WHERE o.service = s.id");
         }
         else {
-            $orders=mysql_query("SELECT o.id, o.name, o.surname, o.tel, o.email, o.status, s.model, s.type, s.cost, o.employee, o.newdate, o.procdate, o.donedate FROM orders o INNER JOIN services s ON o.service = s.id WHERE o.status = '1' OR o.employee = '{$_SESSION['id']}'");
+            $orders=mysqli_query($connect, "SELECT o.id, o.name, o.surname, o.tel, o.email, o.status, s.model, s.type, s.cost, o.employee, o.newdate, o.procdate, o.donedate FROM orders o INNER JOIN services s ON o.service = s.id WHERE o.status = '1' OR o.employee = '{$_SESSION['id']}'");
         }
-        while ($order=mysql_fetch_array($orders)){
+        while ($order=mysqli_fetch_array($orders)){
 
-            $handler=mysql_query("SELECT e.login FROM orders o, employees e WHERE o.employee = e.id AND o.id = '{$order['id']}'");
-            $handle=mysql_fetch_array($handler);
+            $handler=mysqli_query($connect, "SELECT e.login FROM orders o, employees e WHERE o.employee = e.id AND o.id = '{$order['id']}'");
+            $handle=mysqli_fetch_array($handler);
 
             // convert serviceID to serviceType
             if ($order['type'] == "1"){
@@ -89,7 +89,7 @@ if(mysql_num_rows($result)==0) {
 
             // converting modelID to modelName
             $query="SELECT string FROM transcript WHERE value='{$order['model']}'";
-            $string=mysql_fetch_array(mysql_query($query));
+            $string=mysqli_fetch_array(mysqli_query($connect, $query));
             $model=$string['string'];
 
             echo "<table border=\"1\" cellspacing=\"1\">";
@@ -156,4 +156,5 @@ if(mysql_num_rows($result)==0) {
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="../scripts/admin.js" defer></script>
 </html>

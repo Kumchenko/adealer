@@ -1,8 +1,8 @@
 <?php
-mysql_connect("localhost", "root", "") or die ("Неможливо під'єднатися до серверу");
-mysql_select_db("appledealer") or die ("Немає такої таблиці!");
-$response=mysql_query("SELECT o.id, o.status, s.model, s.type, s.cost, o.newdate, o.procdate, o.donedate FROM orders o, services s WHERE o.service = s.id AND o.id='{$_POST['id']}' AND o.tel='{$_POST['tel']}'");
-$order=mysql_fetch_array($response);
+$connect = mysqli_connect("remotemysql.com:3306", "9loMZIDsgF", "mtlKq0K3Hn");
+mysqli_select_db($connect, "9loMZIDsgF");
+$response=mysqli_query($connect, "SELECT o.id, o.status, s.model, s.type, s.cost, o.newdate, o.procdate, o.donedate FROM orders o, services s WHERE o.service = s.id AND o.id='{$_POST['id']}' AND o.tel='{$_POST['tel']}'");
+$order=mysqli_fetch_array($response);
 
 if ($order['id'] == null){
     Header("Location: failed.html");
@@ -35,7 +35,7 @@ if ($order['status'] == "3"){
 
 // перекладаємо value моделі в назву моделі
 $response="SELECT string FROM transcript WHERE value='{$order['model']}'";
-$string=mysql_fetch_array(mysql_query($response));
+$string=mysqli_fetch_array(mysqli_query($connect, $response));
 $model=$string['string'];
 
 // виводимо з order залишені зміні та видаляємо змінну

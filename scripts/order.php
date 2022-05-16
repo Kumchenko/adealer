@@ -1,8 +1,8 @@
 <?php
 session_start();
 // connecting to db
-mysql_connect("localhost", "root", "") or die ("Неможливо під'єднатися до серверу");
-mysql_select_db("appledealer") or die ("Немає такої бази даних!");
+$connect = mysqli_connect("remotemysql.com:3306", "9loMZIDsgF", "mtlKq0K3Hn");
+mysqli_select_db($connect, "9loMZIDsgF");
 
 // model initializing 
 $model=$_POST['model'];
@@ -32,7 +32,7 @@ $status=1;
 // searching for service (initializing serviceid and cost)
 $select = "model='{$model}' AND type='{$type}'";
 $query="SELECT id, model, type, cost FROM services WHERE $select";
-$service=mysql_fetch_array(mysql_query($query));
+$service=mysqli_fetch_array(mysqli_query($connect, $query));
 
 // current datetime
 date_default_timezone_set('Europe/Kiev');
@@ -41,13 +41,13 @@ $newDate = date("Y-m-d H:i:s");
 // creating query and applying
 $insert = "name='{$name}', surname='{$surname}', tel='{$tel}', email='{$email}', service='{$service['id']}', status='1', newDate='{$newDate}'";
 $query="INSERT INTO orders SET {$insert}";
-mysql_query($query);
+mysqli_query($connect, $query);
 
 // checking if success
-if(mysql_affected_rows()>0)
+if(mysqli_affected_rows($connect)>0)
     {
         // prepate to redirect to success.php
-        $_SESSION['id'] = mysql_insert_id();
+        $_SESSION['id'] = mysqli_insert_id($connect);
         $_SESSION['model'] = $service['model'];
         $_SESSION['type'] = $service['type'];
         $_SESSION['date'] = $newDate;
@@ -58,7 +58,7 @@ if(mysql_affected_rows()>0)
     }
 else
     {
-        $t=mysql_affected_rows();
+        $t=mysqli_affected_rows($connect);
         echo "$t Помилка";
     }
 
